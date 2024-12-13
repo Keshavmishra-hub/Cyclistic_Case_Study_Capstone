@@ -54,10 +54,40 @@ SQL Query: [Data Combining](https://github.com/Keshavmishra-hub/Cyclistic_Case_S
 SQL Query: [Data Exploration](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/02.%20Data%20Exploration.sql)  
 Before cleaning the data, I am familiarizing myself with the data to find the inconsistencies.  
 
-  
-## Act
-After identifying the differences between casual and member riders, marketing strategies to target casual riders can be developed to persuade them to become members.  
-Recommendations:  
-1. Marketing campaigns might be conducted in spring and summer at tourist/recreational locations popular among casual riders.
-2. Casual riders are most active on weekends and during the summer and spring, thus they may be offered seasonal or weekend-only memberships.
-3. Casual riders use their bikes for longer durations than members. Offering discounts for longer rides may incentivize casual riders and entice members to ride for longer periods of time.
+Observations:  
+1. The table below shows the all column names and their data types. The __ride_id__ column is our primary key.  
+
+   ![image](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/Column%20Name%20%26%20Data%20Type.png)  
+
+2. The following table shows number of __null values__ in each column.  
+   
+   ![image](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/Null%20Values.png)
+
+   Note that some columns have same number of missing values. This may be due to missing information in the same row i.e. station's name and id for the same station and latitude and longitude for the same ending station.  
+3. As ride_id has no null values, let's use it to check for duplicates.  
+
+   ![image](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/Query%20for%20Duplicate%20rows.png)
+
+   There are no __duplicate__ rows in the data.  
+   
+4. All __ride_id__ values have length of 16 so no need to clean it.
+5. There are 3 unique types of bikes(__rideable_type__) in our data.
+
+   ![image](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/Rideable_type.png)
+
+6. The __started_at__ and __ended_at__ shows start and end time of the trip in YYYY-MM-DD hh:mm:ss UTC format. New column tripduration can be created to find the total trip duration. There are 6418 trips which has duration longer than a day and 151069 trips having less than a minute duration or having end time earlier than start time so need to remove them. Other columns day_of_week and month can also be helpful in analysis of trips at different times in a year.
+7. Total of 875716 rows in __start_station_name__ and 875848 rows in __start_station_id__ is missing which needs to be removed.  
+8. Total of 929202 rows in __end_station_name__ and 929342 rows in __end_station_id__ is  missing which needs to be removed.
+9. Total of 6990 rows have both __end_lat__ and __end_lng__ missing which needs to be removed.
+10. __member_casual__ column has 2 uniqued values as member or casual rider.
+
+    ![image](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/members_casual.png)
+
+11. Columns that need to be removed are start_station_id and end_station_id as they do not add value to analysis of our current problem. Longitude and latitude location columns may not be used in analysis but can be used to visualise a map.
+
+### Data Cleaning
+SQL Query: [Data Cleaning](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/03.%20Data%20Cleaning.sql)  
+1. All the rows having missing values are deleted.  
+2. 3 more columns tripduration for duration of the trip, day_of_week and month are added.  
+3. Trips with duration less than a minute and longer than a day are excluded.
+4. Total 1,551,377 rows are removed in this step.  
