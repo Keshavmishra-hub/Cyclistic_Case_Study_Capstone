@@ -91,3 +91,56 @@ SQL Query: [Data Cleaning](https://github.com/Keshavmishra-hub/Cyclistic_Case_St
 2. 3 more columns tripduration for duration of the trip, day_of_week and month are added.  
 3. Trips with duration less than a minute and longer than a day are excluded.
 4. Total 1,551,377 rows are removed in this step.  
+
+## Analyze and Share
+SQL Query: [Data Analysis](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/04.%20Data%20Analysis.sql)  
+Data Visualization: [Tableau](https://public.tableau.com/views/CyclistBiketripCaseStudy/TripstoEndStationin2023?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)  
+The data is stored appropriately and is now prepared for analysis. I queried multiple relevant tables for the analysis and visualized them in Tableau.  
+The analysis question is: How do annual members and casual riders use Cyclistic bikes differently?  
+
+First of all, member and casual riders are compared by the type of bikes they are using.  
+
+![image](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/Bikes%20Types%20in%202023.png)
+
+![image](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/Total%20Trips%20in%202023.png)
+
+![image](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/Average%20Ride%20Duration%20in%202023.png)   
+  
+![image](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/Trips%20at%20Start%20Station%20in%202023.png)  
+  
+![image](https://github.com/Keshavmishra-hub/Cyclistic_Case_Study_Capstone/blob/main/Trips%20to%20End%20Station%20in%202023.png)
+
+
+>## Conclusions
+The analysis conducted on Cyclistic's bike-sharing program data reveals key insights regarding the usage patterns and preferences of casual riders compared to annual members.
+
+1. **Usage Patterns**: Annual members tend to use the bikes more frequently for shorter trips, whereas casual riders generally have longer trip durations.
+2. **Membership Conversion Opportunities**: The significant differences in ride lengths suggest that targeted marketing strategies could effectively convert casual riders into annual members.
+3. **Seasonal Trends**: Identifying trends based on monthly data can help in planning promotional offers or campaigns that align with peak usage times.
+4. **Bike Preferences**: The preference for classic bikes among both groups suggests that promotional efforts could be centered around these bikes to attract casual riders.
+
+## Final observations
+Based on the analyses, members are likely regular commuters using the bikes as a means of transportation to and from work, while casual riders are more likely to use the bikes for leisure, especially on weekends.
+
+## Act
+Based on our business task, how can we convert casual riders into annual members?
+### Recommendations for the Marketing Team
+
+- **Awareness Campaigns at Popular Stations**:
+Launch awareness campaigns targeting casual riders at the stations they frequent most on weekends, highlighting the key benefits of becoming annual members:
+  
+  - **Economic Benefits**: Emphasize the cost savings of an annual payment compared to paying for rides throughout the year, showing how it's more affordable in the long run.
+  - **Environmental Impact**: Educate riders on the environmental advantages of using a bike for daily commutes. Highlight that cycling to work reduces CO2 emissions and promotes a more sustainable way of commuting.
+
+- **Promotional Materials at Key Stations**:
+Distribute flyers at the busiest stations for casual riders during weekends, showcasing special discounts tailored specifically for them. These could also offer **group promotions** for families or friends, encouraging them to upgrade to annual memberships together.
+
+- **Seasonal Promotions**:
+Offer **seasonal discounts**, such as significant price reductions during the winter months, to incentivize using bikes for commuting to work, even in colder seasons.
+
+- **Marketing Channels**:
+As discussed, the campaigns can be executed through various channels:
+
+  - **Flyers** at popular stations where casual riders are most active.
+  - **Targeted emails** that are sent directly after casual riders activate their bikes, promoting the benefits of weekly use and annual membership upgrades.
+  - **Social Media** campaigns, especially highlighting the environmental impact of biking and encouraging riders to feel like protagonists in creating a more sustainable transportation future.
